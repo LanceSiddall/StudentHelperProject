@@ -1,6 +1,5 @@
 <?php
-session_start();
-//Starts a php session so that if one hasn't already been started, there isn't an issue caused by calling a session variable
+session_start();//Starts a php session so that if one hasn't already been started, there isn't an issue caused by calling a session variable
 if(!$_SESSION['loggedIn']) {
     //If the user attempts to access this page without being logged in, they will be redirected to the login page
     header('location: index.php');
@@ -14,7 +13,7 @@ if(!$_SESSION['loggedIn']) {
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<section id="externalWrapper">
+	<section id="externalWrapper"><!--Container for everything other than the footer-->
 		<nav>
 			<ul>
 				<li>
@@ -37,24 +36,24 @@ if(!$_SESSION['loggedIn']) {
 				</li>
 			</ul>
 		</nav>
-		<section id="internalWrapper">
-			<div class="row cf">
-				<div class="third">
+		<section id="internalWrapper"><!--Container for the main content of the page-->
+			<div class="row cf"><!--Allows for the items to be aligned in a row-->
+				<div class="third"><!--Gives the containing items 33.33% the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 					<a href="routeFinder.php"><img alt="" src="St_Images/routeFinderExample.gif">
 					<h3>RouteFinder</h3>
 					<p>Find your way around the University</p></a>
 				</div>
-				<div class="third">
+				<div class="third"><!--Gives the containing items 33.33% the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 					<a href="joinGroup.php"><img alt="" src="St_Images/findStudyGroup.gif">
 					<h3>Look up study groups</h3>
 					<p>Find groups that you can study with</p></a>
 				</div>
-				<div class="third">
+				<div class="third"><!--Gives the containing items 33.33% the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 					<a href="createGroupPage.php"><img alt="" src="St_Images/createStudyGroup.gif">
 					<h3>Create a study group</h3>
 					<p>Create a group that is specific to you</p></a>
 				</div>
-				<div class="third">
+				<div class="third"><!--Gives the containing items 33.33% the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 					<a href="courseworkDropoffStud.php"><img alt="" src="St_Images/dropOfExample.gif">
 					<h3>Find the course work drop off point</h3>
 					<p>Look up where course work drop off points are located</p></a>
@@ -62,7 +61,7 @@ if(!$_SESSION['loggedIn']) {
 			</div>
 		</section>
 	</section>
-	<footer>
+	<footer><!--Contains some information that may be of interest to a small portion of users. Likely to missed by screen readers as it's the final piece of content on every page.-->
 		<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a> <a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS!" src="http://jigsaw.w3.org/css-validator/images/vcss" style="border:0;width:88px;height:31px"></a>
 	</footer>
 </body>
