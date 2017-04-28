@@ -1,25 +1,31 @@
 function SuccSign() {
   alert("Sign up successfull, you may now login.");
+  //Creates an alert that informs the user of the sucessful creation of their account
 }
 
 function newGroup() {
   alert("Study Group Added!");
+  //Creates an alert that informs the user of the sucessful creation of their group
 }
 
 function removeStudent() {
   alert("Student removed");
+  //Creates an alert that informs the user of the sucessful removal of a student
 }
 
 function groupJoined() {
   alert("Successfully joined group");
+  //Creates an alert that informs the user of their sucessful joining of a group
 }
 
 function wrongUserPass() {
   alert("Wrong username or password");
+  //Creates an alert that informs the user of an incorrect username or password
 }
 
 function roomAdded() {
   alert("Room Added");
+  //Creates an alert that informs the user of the sucessful creation of a room
 }
 
 function compareEmail(){
