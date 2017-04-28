@@ -4,7 +4,6 @@ if(!$_SESSION['loggedIn']) {
 	header('location: index.php');
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
