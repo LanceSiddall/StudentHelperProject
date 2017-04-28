@@ -1,6 +1,6 @@
 <?php
 session_start();//Starts a php session so that if one hasn't already been started, there isn't an issue caused by calling a session variable
-if(!$_SESSION['loggedIn']) {
+if(!$_SESSION['loggedIn']) {//If the user attempts to access this page without being logged in, they will be redirected to the login page
 	header('location: index.php');
 }
 ?>
