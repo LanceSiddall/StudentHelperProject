@@ -3,6 +3,8 @@ studentHelper file is the most upto date/live edition
 
 Joes guide to connect to the server and use the sql database is in the file: ConnectToDatabase
 
+System setup instructions /site use file: SystemSetup.txt
+
 What we still need to finish by Friday is:
 
 -Comment code
@@ -11,9 +13,3 @@ What we still need to finish by Friday is:
 Code that still needs to be finished is:
  
 -Student & Lecturer cw dropoff 
-
-
-
-
-
-
