@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();//Starts a php session so that if one hasn't already been started, there isn't an issue caused by calling a session variable
 if(!$_SESSION['loggedIn']) {
 	header('location: index.php');
 }
@@ -11,36 +11,9 @@ if(!$_SESSION['loggedIn']) {
 	<meta charset="UTF-8">
 	<title>Route Finder</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
-	<style>
-		#map {
-			height: 400px;
-			width: 80%;
-
-		   }
-
-		#floating-panel {
-				position: absolute;
-				top: 75%;
-				left: 18%;
-
-				background-color: #fff;
-				padding: 5px;
-				border: 1px solid #999;
-				text-align: center;
-				font-family: 'Roboto','sans-serif';
-				line-height: 30px;
-				padding-left: 20em;
-				padding-right: 20em;
-				color: black;
-				font-size: 30;
-			}
-	</style>
-	<!--<script src="Javascript/JS.js">-->
-	</script>
 </head>
 <body>
-	<section id="externalWrapper">
-		<h2 style="display:none;">.</h2>
+	<section id="externalWrapper"><!--Container for everything other than the footer-->
 		<nav>
 			<ul>
 				<li>
@@ -53,7 +26,7 @@ if(!$_SESSION['loggedIn']) {
 					<a href="joinGroup.php">Join Group</a>
 				</li>
 				<li>
-					<a class="active" href="routeFinder.php">Route Finder</a>
+					<a class="active" href="routeFinder.php">Route Finder</a><!--The anchor with the class of active will be white rather than grey to signify that it is the current page-->
 				</li>
 				<li>
 					<a href="courseworkDropoffStud.php">Coursework Dropoff</a>
@@ -63,13 +36,12 @@ if(!$_SESSION['loggedIn']) {
 				</li>
 			</ul>
 		</nav>
-
-		<section id="internalWrapper">
-			<div class="row cf">
-					<div class="row cf">
+		<section id="internalWrapper"><!--Container for the main content of the page-->
+			<div class="row cf"><!--Allows for the items to be aligned in a row-->
+					<div class="row cf"><!--Allows for the items to be aligned in a row-->
 						<div class="full">
 							<h3>Route Finder</h3>
-							<div style="margin:auto;"id="map">
+							<div id="map"><!--Area for google map to be embedded-->
 								<script>
 								  function initMap() {
 									var directionsService = new google.maps.DirectionsService;
@@ -103,14 +75,13 @@ if(!$_SESSION['loggedIn']) {
 								</script>
 						</div>
 					</div>
-					<div class="row cf">
-
-							<div class="row cf">
-								<div class="half">
+					<div class="row cf"><!--Allows for the items to be aligned in a row-->
+							<div class="row cf"><!--Allows for the items to be aligned in a row-->
+								<div class="half"><!--Gives the containing items half the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 									<b>Start Location: </b>
 								</div>
-								<div class="half">
-									<select id="start">
+								<div class="half"><!--Gives the containing items half the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
+									<select id="start"><!--List of start locations for the map-->
 										<option value="Buckingham Building, Portsmouth">Anglesea Building</option>
 										<option value="Buckingham Building, Portsmouth">Buckingham Building</option>
 										<option value="Portland Building, Portsmouth">Portland Building</option>
@@ -122,12 +93,12 @@ if(!$_SESSION['loggedIn']) {
 									</select>
 								</div>
 							</div>
-							<div class="row cf">
-								<div class="half">
+							<div class="row cf"><!--Allows for the items to be aligned in a row-->
+								<div class="half"><!--Gives the containing items half the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 									<b style="width:100%;">End Location: </b>
 								</div>
-								<div class="half">
-									<select id="end">
+								<div class="half"><!--Gives the containing items half the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
+									<select id="end"><!--List of end locations for the map-->
 										<option value="Buckingham Building, Portsmouth">Anglesea Building</option>
 										<option value="Buckingham Building, Portsmouth">Buckingham Building</option>
 										<option value="Portland Building, Portsmouth">Portland Building</option>
@@ -136,7 +107,6 @@ if(!$_SESSION['loggedIn']) {
 										<option value="Spinnaker Sports Centre, Cambridge Road, Portsmouth">Spinnaker Sports Centre </option>
 										<option value="Park Building, Portsmouth">Spinnaker Sports Centre </option>
 										<option value="The University Library, University of Portsmouth, Cambridge Road, Portsmouth">UoP Library</option>
-
 									</select>
 								</div>
 						<script
@@ -147,15 +117,12 @@ if(!$_SESSION['loggedIn']) {
 				</div>
 			</div>
 		</section>
-
 	</section>
-	<footer>
-				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="http://jigsaw.w3.org/css-validator/check/referer">
-					<img style="border:0;width:88px;height:31px"
-						src="http://jigsaw.w3.org/css-validator/images/vcss"
-						alt="Valid CSS!" />
-				</a>
-			</footer>
+	<footer><!--Contains some information that may be of interest to a small portion of users. Likely to missed by screen readers as it's the final piece of content on every page.-->
+		<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+		</a>
+	</footer>
 </body>
 </html>
