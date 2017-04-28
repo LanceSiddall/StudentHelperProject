@@ -18,7 +18,6 @@ $studyGroupID= $conn->query("SELECT studyID FROM studygroup WHERE studyName = '$
 
 while ($row = $userID->fetch_assoc()) {
   while ($row2 = $studyGroupID->fetch_assoc()) {
-      
       $addUserToGroup = $conn->query("INSERT INTO instudygroup (user_FK, studyGroup_FK) VALUES ({$row['ID']},{$row2['studyID']})");
   }
 };
